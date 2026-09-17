@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>プライバシーポリシー | Geekonis</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+
+<p class="lang"><a href="privacy-en.html">English</a></p>
+
+<h1>プライバシーポリシー</h1>
+
+<p class="meta">
+対象アプリ: Crystonis / Indexonis / Spectronis / Pacbedonis（以下「本アプリ」）<br>
+提供者: Geekonis（以下「当方」）<br>
+制定日: 2026年8月29日
+</p>
+
+<h2>1. 要約</h2>
+
+<p><strong>当方は本アプリの利用者から個人情報を収集しません。</strong>
+アカウント登録は不要で、広告は表示せず、行動履歴を集める解析ツール（アナリティクスSDK）も
+組み込んでいません。本アプリが作成・取得したデータは、原則として端末内にのみ保存されます。</p>
+
+<h2>2. 当方が収集しない情報</h2>
+
+<ul>
+  <li>氏名・メールアドレス・電話番号などの識別情報</li>
+  <li>広告ID、端末の一意な識別子</li>
+  <li>位置情報</li>
+  <li>連絡先、通話履歴、SMS</li>
+  <li>アプリの操作履歴・利用統計</li>
+</ul>
+
+<p>当方は利用者を識別できるサーバーを運用しておらず、本アプリから当方へ送信される情報はありません。</p>
+
+<h2>3. 端末内に保存されるデータ</h2>
+
+<p>本アプリは、機能の実現のために次のデータを<strong>端末内のアプリ領域にのみ</strong>保存します。
+アプリをアンインストールすると削除されます。</p>
+
+<ul>
+  <li>利用者が読み込んだ結晶構造ファイル（CIF）、画像ファイル、およびそれらの解析結果</li>
+  <li>計算条件、装置設定などの設定値</li>
+  <li>不具合の調査に使うデバッグログ</li>
+</ul>
+
+<h2>4. 外部への通信</h2>
+
+<p>アプリごとに異なります。</p>
+
+<table>
+  <thead>
+    <tr><th>アプリ</th><th>外部への通信</th><th>送信される内容</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Crystonis</td>
+      <td>Crystallography Open Database (crystallography.net)</td>
+      <td>利用者が入力した検索文字列と、選択した構造のCOD ID</td>
+    </tr>
+    <tr>
+      <td>Indexonis</td>
+      <td>Crystallography Open Database (crystallography.net)</td>
+      <td>利用者が入力した検索文字列と、選択した構造のCOD ID</td>
+    </tr>
+    <tr><td>Spectronis</td><td>なし（通信権限を持ちません）</td><td>—</td></tr>
+    <tr><td>Pacbedonis</td><td>なし（通信権限を持ちません）</td><td>—</td></tr>
+  </tbody>
+</table>
+
+<p>Crystonis と Indexonis の検索機能は、利用者が検索を実行したときにのみ通信します。
+送信するのは検索文字列と構造の識別番号だけで、利用者を識別する情報は含みません。
+Crystallography Open Database は当方とは無関係の第三者が運営する公開データベースです。</p>
+
+<h2>5. 画像と文字認識について（Indexonis）</h2>
+
+<p>Indexonis はカメラで撮影した画像や端末内の画像を解析し、画像中の文字（スケールバーの数値など）を
+読み取ります。この解析と文字認識は<strong>すべて端末内で完結</strong>します。
+画像そのものも、認識結果も、当方や第三者のサーバーへ送信されません。</p>
+
+<h2>6. 共有機能について</h2>
+
+<p>本アプリには、解析結果やデバッグログを他のアプリへ渡す「共有」機能があります。
+これは<strong>利用者が共有ボタンを押し、渡す先を選んだときにのみ</strong>動作します。
+当方のサーバーに送信されるわけではなく、渡した先のアプリでの取り扱いは、そのアプリの
+プライバシーポリシーに従います。</p>
+
+<h2>7. 権限について</h2>
+
+<table>
+  <thead>
+    <tr><th>権限</th><th>使うアプリ</th><th>用途</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>インターネット</td><td>Crystonis, Indexonis</td><td>結晶構造データベースの検索</td></tr>
+    <tr><td>通知</td><td>Pacbedonis</td><td>時間のかかる計算の進行状況の表示</td></tr>
+    <tr><td>フォアグラウンドサービス／スリープ解除</td><td>Pacbedonis</td><td>画面が消えている間も計算を続けるため</td></tr>
+  </tbody>
+</table>
+
+<p>Spectronis はいかなる権限も要求しません。</p>
+
+<h2>8. クラッシュ情報について</h2>
+
+<p>当方はクラッシュ収集用の外部ツールを組み込んでいません。
+ただし、Google Play ストア経由で配布されるアプリについては、
+<strong>Google が自動的にクラッシュ情報を収集</strong>し、開発者に統計として提供する場合があります
+（Android vitals）。この収集は Google が行うもので、当方が提供する内容や範囲を決めることはできません。
+詳細は Google のプライバシーポリシーをご確認ください。</p>
+
+<p>なお本アプリは不具合調査用のログを端末内に記録しますが、これが当方に届くのは、
+利用者が自ら共有機能で送信した場合のみです。</p>
+
+<h2>9. 児童のプライバシー</h2>
+
+<p>本アプリは電子顕微鏡を使う研究・技術者向けの専門的な道具であり、13歳未満の児童を
+対象としていません。当方は児童から意図的に情報を収集することはありません。</p>
+
+<h2>10. 本ポリシーの変更</h2>
+
+<p>本ポリシーを変更する場合は、このページを更新し、制定日を改めます。
+重要な変更がある場合はアプリの更新情報でもお知らせします。</p>
+
+<h2>11. お問い合わせ</h2>
+
+<p>連絡先メールアドレス: <a href="mailto:geekonissupport@gmail.com">geekonissupport@gmail.com</a></p>
+
+<hr>
+<p class="foot"><a href="index.html">Geekonis</a></p>
+
+</main>
+</body>
+</html>
