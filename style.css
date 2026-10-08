@@ -1,0 +1,111 @@
+/* Geekonis サイト共通スタイル。
+   ビルド工程を持たない素のCSS1枚。GitHub Pages に置くだけで動く状態を保つ。 */
+
+:root {
+  color-scheme: light dark;
+  --fg: #1a1c1e;
+  --fg-dim: #5a5f66;
+  --bg: #fdfcff;
+  --surface: #f1f0f4;
+  --line: #d6d4da;
+  --accent: #3454d1; /* Indexonis のシード色。シリーズ共通のアクセントとして使う */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --fg: #e4e2e6;
+    --fg-dim: #a8a6ac;
+    --bg: #131316;
+    --surface: #1e1e22;
+    --line: #37373c;
+    --accent: #b3c5ff;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: system-ui, -apple-system, "Segoe UI", "Hiragino Sans",
+               "Noto Sans JP", sans-serif;
+  line-height: 1.75;
+  font-size: 16px;
+}
+
+main {
+  max-width: 44rem;
+  margin: 0 auto;
+  padding: 2.5rem 1.25rem 4rem;
+}
+
+h1 {
+  font-size: 1.75rem;
+  line-height: 1.35;
+  margin: 0 0 1rem;
+}
+
+h2 {
+  font-size: 1.15rem;
+  margin: 2.5rem 0 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--line);
+}
+
+p, ul, table { margin: 0 0 1rem; }
+
+ul { padding-left: 1.25rem; }
+
+li { margin-bottom: 0.35rem; }
+
+a { color: var(--accent); }
+
+.lang {
+  text-align: right;
+  font-size: 0.875rem;
+  margin-bottom: 1.5rem;
+}
+
+.meta, .foot {
+  color: var(--fg-dim);
+  font-size: 0.875rem;
+}
+
+.todo {
+  background: var(--surface);
+  border-left: 3px solid var(--accent);
+  padding: 0.75rem 1rem;
+  border-radius: 0 6px 6px 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9375rem;
+}
+
+th, td {
+  border: 1px solid var(--line);
+  padding: 0.5rem 0.75rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+th { background: var(--surface); font-weight: 600; }
+
+hr { border: 0; border-top: 1px solid var(--line); margin: 2.5rem 0 1.25rem; }
+
+.apps { list-style: none; padding: 0; }
+
+.apps li {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 0.875rem 1.125rem;
+  margin-bottom: 0.75rem;
+  background: var(--surface);
+}
+
+.apps strong { display: block; font-size: 1.0625rem; }
+
+.apps span { color: var(--fg-dim); font-size: 0.9375rem; }
