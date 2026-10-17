@@ -16,7 +16,7 @@
 <p class="meta">
 Applies to: Crystonis / Indexonis / Spectronis / Pacbedonis (the "Apps")<br>
 Provider: Geekonis ("we")<br>
-Effective: 30 September 2026 (first issued 29 August 2026)
+Effective: 17 October 2026 (first issued 29 August 2026)
 </p>
 
 <h2>1. Summary</h2>
@@ -65,12 +65,20 @@ Uninstalling an app removes it.</p>
       <td>Crystallography Open Database (crystallography.net)</td>
       <td>The search text you type, and the COD ID of a structure you select</td>
     </tr>
-    <tr><td>Spectronis</td><td>None (the app holds no network permission)</td><td>—</td></tr>
-    <tr><td>Pacbedonis</td><td>None (the app holds no network permission)</td><td>—</td></tr>
+    <tr>
+      <td>Spectronis</td>
+      <td>Crystallography Open Database (crystallography.net)</td>
+      <td>The search text you type, and the COD ID of a structure you select</td>
+    </tr>
+    <tr>
+      <td>Pacbedonis</td>
+      <td>Crystallography Open Database (crystallography.net)</td>
+      <td>The search text you type, and the COD ID of a structure you select</td>
+    </tr>
   </tbody>
 </table>
 
-<p>Crystonis and Indexonis connect only when you run a search. Only the search string and a
+<p>All four apps connect only when you run a search. Only the search string and a
 structure identifier are transmitted; nothing that identifies you is included.
 The Crystallography Open Database is a public database operated by an unrelated third party.</p>
 
@@ -94,13 +102,13 @@ ours; how the receiving app handles the data is governed by that app's privacy p
     <tr><th>Permission</th><th>Apps</th><th>Purpose</th></tr>
   </thead>
   <tbody>
-    <tr><td>Internet</td><td>Crystonis, Indexonis</td><td>Searching the crystal structure database</td></tr>
+    <tr><td>Internet</td><td>All four apps</td><td>Searching the crystal structure database</td></tr>
     <tr><td>Notifications</td><td>Pacbedonis</td><td>Showing progress of long-running calculations</td></tr>
     <tr><td>Foreground service / wake lock</td><td>Pacbedonis</td><td>Continuing a calculation while the screen is off</td></tr>
   </tbody>
 </table>
 
-<p>Spectronis requests no permissions at all.</p>
+<p>The only permission Spectronis requests is internet access.</p>
 
 <p>Indexonis can analyse a photo you take, but it <strong>does not request the camera
 permission</strong>: it hands the capture over to the camera app already on your device and only
