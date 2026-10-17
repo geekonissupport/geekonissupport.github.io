@@ -32,6 +32,10 @@ Googleが渡す `google<ランダム>.html` をリポジトリの**ルートに�
 
 ## 公開手順
 
+**公開済み。** 2026-10-17 に `https://geekonissupport.github.io/` と `/privacy-en.html` が
+ともに 200 を返すことを確認した（トップページは `<html lang="en">` の英語版）。
+以下は復旧・作り直しのときの手順。
+
 1. GitHub の `geekonissupport` アカウントで公開リポジトリ `geekonissupport.github.io` を作る
 2. このディレクトリの中身をそのまま push する
 3. Settings → Pages → Source を `main` ブランチのルートにする
