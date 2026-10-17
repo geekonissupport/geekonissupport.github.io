@@ -59,8 +59,9 @@ Googleが渡す `google<ランダム>.html` をリポジトリの**ルートに�
 
 - **4本のアプリと違って、このリポジトリだけはリモートを持っている。** つまり退避が
   GitHub にもある唯一のリポジトリ
-- **ブランチ名が違う**（`master` と `main`）。こちらからpushするときは `git push`
-  （upstream設定済み。手で書くなら `git push origin master:main`）
+- **ブランチ名が違う**（`master` と `main`）。既定の `push.default=simple` は名前が違うと
+  pushを拒否するので、このリポジトリに `push.default=upstream` を設定した。
+  **これで素の `git push` が通る**（設定しない場合は `git push origin master:main`）
 - 編集はどちらか一方に決めて行う。両方で別々に直すと、また共通祖先の無い履歴になる
 - **親リポジトリ（`D:\source\flutter`）もこのディレクトリのファイルを追跡している。**
   サイトを直すと**2つのリポジトリにコミットが要る**（ここと親）。片方だけ入れると、
