@@ -29,7 +29,8 @@ body {
   background: var(--bg);
   color: var(--fg);
   font-family: system-ui, -apple-system, "Segoe UI", "Hiragino Sans",
-               "Noto Sans JP", sans-serif;
+               "Noto Sans JP", "Apple SD Gothic Neo", "Malgun Gothic",
+               "Noto Sans KR", sans-serif;
   line-height: 1.75;
   font-size: 16px;
 }
@@ -55,7 +56,9 @@ h2 {
 
 p, ul, table { margin: 0 0 1rem; }
 
-ul { padding-left: 1.25rem; }
+ul, ol { padding-left: 1.25rem; }
+
+ol { margin: 0 0 1rem; }
 
 li { margin-bottom: 0.35rem; }
 
