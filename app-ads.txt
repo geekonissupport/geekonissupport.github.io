@@ -1,0 +1,5 @@
+# AdMobがアプリの所有者を確認するために読む（IABのapp-ads.txt）。
+# Playの掲載に書いたデベロッパーウェブサイトの直下に置く必要がある。
+# pub-8237725760753263 は AndroidManifest の
+# ca-app-pub-8237725760753263~2192768581 と同じ番号。
+google.com, pub-8237725760753263, DIRECT, f08c47fec0942fa0

@@ -1,0 +1,301 @@
+/* Geekonis サイト共通スタイル。
+   ビルド工程を持たない素のCSS1枚。GitHub Pages に置くだけで動く状態を保つ。 */
+
+:root {
+  /* 明るい配色で固定する。2026-11-02にユーザー指示「全体的に少しバックグラウンド
+     とか明るく、明るい雰囲気にしたい」。以前は prefers-color-scheme で暗い配色にも
+     切り替えていたが、OSを暗くしている人には常に暗く見えていた。製品を見せる場所
+     なので明るい側に揃える。暗い配色に戻すときはこのブロックを分ければよい。 */
+  color-scheme: light;
+  --fg: #1b1d22;
+  --fg-dim: #5f646e;
+  /* 2026-11-02、真っ白+淡い青の敷きは「明るすぎて目がくらくらする」と指摘された。
+     地をわずかに灰青へ落とし、カード側を白にして段差で見せる。直射の白面を
+     減らすのが目的なので、地を白に戻さないこと。 */
+  --bg: #f4f6fa;
+  --surface: #ffffff;
+  --line: #dde2ec;
+  --accent: #3454d1; /* アクセント色 */
+  --accent-soft: #e9edf8;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  /* 上端だけごく薄く。前は22remまで色を引いていて面積が広すぎた */
+  background-image: linear-gradient(180deg, var(--accent-soft) 0, var(--bg) 9rem);
+  background-repeat: no-repeat;
+  color: var(--fg);
+  font-family: system-ui, -apple-system, "Segoe UI", "Hiragino Sans",
+               "Noto Sans JP", "Apple SD Gothic Neo", "Malgun Gothic",
+               "Noto Sans KR", sans-serif;
+  line-height: 1.75;
+  font-size: 16px;
+}
+
+/* PCでは横をもう少し使う(2026-11-02の指摘)。ただし本文まで広げると1行が
+   長くなって読みにくいので、段落・箇条書きだけ幅を抑える。見出し・表・
+   手順ブロックは広い側を使う。 */
+main {
+  max-width: 52rem;
+  margin: 0 auto;
+  padding: 2.5rem 1.25rem 4rem;
+}
+
+main > p, main > ul, main > ol { max-width: 42rem; }
+
+h1 {
+  font-size: 1.75rem;
+  line-height: 1.35;
+  margin: 0 0 1rem;
+}
+
+h2 {
+  font-size: 1.15rem;
+  margin: 2.5rem 0 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--line);
+}
+
+p, ul, table { margin: 0 0 1rem; }
+
+ul, ol { padding-left: 1.25rem; }
+
+ol { margin: 0 0 1rem; }
+
+li { margin-bottom: 0.35rem; }
+
+a { color: var(--accent); }
+
+.lang {
+  text-align: right;
+  font-size: 0.875rem;
+  margin-bottom: 1.5rem;
+}
+
+.meta, .foot {
+  color: var(--fg-dim);
+  font-size: 0.875rem;
+}
+
+.todo {
+  background: var(--surface);
+  border-left: 3px solid var(--accent);
+  padding: 0.75rem 1rem;
+  border-radius: 0 6px 6px 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9375rem;
+}
+
+th, td {
+  border: 1px solid var(--line);
+  padding: 0.5rem 0.75rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+th { background: var(--surface); font-weight: 600; }
+
+tbody tr:nth-child(odd) td { background: #fafbfe; }
+
+hr { border: 0; border-top: 1px solid var(--line); margin: 2.5rem 0 1.25rem; }
+
+.apps { list-style: none; padding: 0; }
+
+.apps li {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 0.875rem 1.125rem;
+  margin-bottom: 0.75rem;
+  background: var(--surface);
+}
+
+.apps strong { display: block; font-size: 1.0625rem; }
+
+.apps span { color: var(--fg-dim); font-size: 0.9375rem; }
+
+/* ---- 製品ポータル（2026-11-02 追加） --------------------------------------
+   法務ページ（privacy*.html / terms*.html / scoresnap-*.html）は**根元のまま
+   動かさない**。URLがPlay Consoleとアプリの「情報」画面に直書きされており、
+   配布済みのビルドからのリンクが切れるため。新しいページは /apps/ 以下に足す。 */
+
+/* トップの名前まわり。2026-11-02にユーザー指示「Geekonisのところがもう少し
+   目立つといい」。字を大きくし、シリーズのアクセント色を当てる。
+   製品ページのh1は従来のままにする。
+   下の横棒は、最初3.25remの短い棒にしたら「中途半端」と言われた。幅を文字に
+   合わせると意図が出る。そのためh1をinline-blockにして幅を文字幅に縮め、
+   棒を100%にしている(ブロックのままだと段組みの幅いっぱいに伸びる)。 */
+.brand { margin-bottom: 2.25rem; }
+
+.brand h1 {
+  display: inline-block; /* 幅を文字幅に縮める。下の棒を文字に合わせるため */
+  font-size: clamp(2.25rem, 8vw, 3.25rem);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--accent);
+  margin: 0 0 0.875rem;
+}
+
+.brand h1::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 5px;
+  border-radius: 3px;
+  background: var(--accent);
+  margin-top: 0.6rem;
+  opacity: 0.45;
+}
+
+.brand .lead {
+  font-size: 1.0625rem;
+  max-width: 38rem;
+  margin-bottom: 0.875rem;
+}
+
+.site-nav {
+  font-size: 0.875rem;
+  margin-bottom: 1.5rem;
+  color: var(--fg-dim);
+}
+
+/* アプリ一覧をアイコン付きのカードにする */
+.apps li { display: flex; gap: 0.875rem; align-items: flex-start; }
+
+.apps img {
+  width: 48px;
+  height: 48px;
+  border-radius: 11px;
+  flex: none;
+}
+
+.apps .body { min-width: 0; }
+
+.apps .state {
+  display: inline-block;
+  font-size: 0.75rem;
+  color: var(--fg-dim);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0 0.5rem;
+  margin-left: 0.4rem;
+  vertical-align: 0.1em;
+}
+
+.hero {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  margin-bottom: 1.5rem;
+}
+
+/* 手順の説明。画面1枚ごとに何をするかを添える。
+   2026-11-02にユーザー指示「スクリーンショットを固定して個別にステップの説明を
+   するようにしてGoogle Playよりも丁寧な感じに」。横スクロールの並びだと
+   ストアと同じで、どの画面で何をするのかが伝わらなかった。 */
+.step {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  margin: 0 0 2.25rem;
+}
+
+.step img {
+  width: 186px;
+  height: auto;
+  flex: none;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  box-shadow: 0 2px 10px rgba(30, 40, 80, 0.07);
+}
+
+.step .text { min-width: 0; }
+
+/* 左右交互に置く。どちらに画像があるかで区切りが付き、縦に長い並びでも
+   どこを読んでいるか見失いにくい(2026-11-02にユーザー提案)。
+   兄弟にh2やpが混ざるのでnth-childでは狙えない。HTML側でaltを付ける。 */
+.step.alt { flex-direction: row-reverse; }
+
+/* 1つの手順で3枚並べたいとき。flexの子として扱う */
+.trio { display: flex; gap: 0.5rem; flex: none; }
+
+/* `.step img` と詳細度が並ぶと、後に書いたほうが勝ってしまう。
+   3枚並べの画像は必ずこちらを使わせたいので `.step .trio img` で一段上げる
+   (2026-11-02、モバイルで3枚が62%ずつになり186%幅で横にはみ出した)。 */
+.step .trio img {
+  width: 118px;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+  box-shadow: 0 2px 10px rgba(30, 40, 80, 0.07);
+}
+
+/* 狭い画面では3枚で画面幅を分け合う。29vw固定にしていたら、3枚ぶんと隙間の
+   合計が本文幅を超えて右がはみ出していた(2026-11-02に実機で指摘)。
+   割り算で出せば器の幅を超えない。 */
+@media (max-width: 40rem) {
+  .trio { align-self: center; width: 100%; }
+  .step .trio img { width: calc((100% - 1rem) / 3); max-width: none; }
+}
+
+.step h3 {
+  font-size: 1.0625rem;
+  margin: 0 0 0.5rem;
+  line-height: 1.4;
+}
+
+.step .n {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.6rem;
+  height: 1.6rem;
+  margin-right: 0.5rem;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #fff;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  vertical-align: 0.1em;
+}
+
+.step p { margin-bottom: 0.6rem; }
+
+.step p:last-child { margin-bottom: 0; }
+
+/* 狭い画面では画像を上に積む。
+   `.step.alt { flex-direction: row-reverse }` は詳細度(2,0)で、ここの
+   `.step`(1,0)より強い。メディアクエリは詳細度を上げないので、altを明示
+   しないと偶数番の手順だけ横並びのまま残る(2026-11-02に実機で発覚。
+   厚みシリーズが横に並び、文字が細い柱になっていた)。 */
+@media (max-width: 40rem) {
+  .step,
+  .step.alt { flex-direction: column; gap: 0.875rem; }
+  .step img { width: 62%; max-width: 220px; align-self: center; }
+}
+
+.buy {
+  display: inline-block;
+  background: var(--accent);
+  color: var(--bg);
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 0.6rem 1.25rem;
+  margin: 0 0.5rem 0.5rem 0;
+}
+
+.buy.secondary {
+  background: transparent;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+}
+
+.plans th:first-child { width: 40%; }
