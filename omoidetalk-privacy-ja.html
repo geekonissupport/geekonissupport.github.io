@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>プライバシーポリシー | 想い出トーク | Geekonis</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+
+<p class="lang"><a href="omoidetalk-privacy-en.html" hreflang="en">English</a> &middot;
+<a href="omoidetalk-privacy-ko.html" hreflang="ko">한국어</a></p>
+
+<h1>プライバシーポリシー — 想い出トーク</h1>
+
+<p class="meta">
+対象: 想い出トーク（以下「本アプリ」、<code>io.github.geekonis.omoidetalk</code>）<br>
+提供者: Geekonis（以下「当方」）<br>
+発効日: 2026年11月22日（初版）／2026年11月26日改定
+</p>
+
+<p>本ポリシーは想い出トークのみを対象とします。当方の他のアプリには別のポリシーがあります。</p>
+
+<h2>1. 要約</h2>
+
+<p>本アプリは、お客様がLINEから書き出したトーク履歴のテキストファイルと、古いAndroid端末に
+残っている写真・動画のファイルを読み取り、写真を会話の元の位置へ並べ直します。この突き合わせは
+<strong>すべてお客様の端末の中だけ</strong>で行われます。トーク履歴・写真・動画が
+どこかへ送信されることはありません。当方はサーバーを一切運用していません。</p>
+
+<p>端末から出ていくものは2つだけで、それ以外はありません。広告が表示されるときの
+<strong>広告識別子</strong>と、Google Playとやり取りする<strong>購入情報</strong>です。
+どちらも第2節で説明します。</p>
+
+<h2>2. 第三者のサービスを通じて取得される情報</h2>
+
+<p><strong>Google AdMob</strong> &mdash; リワード動画広告の表示に使用します。広告を1回見ると、
+1つの会話の1週間ぶんが解放されます。AdMobは広告を選び配信するために、広告識別子と広告
+リクエストのデータを受け取ります。<strong>有料の解放を購入済みの場合、広告SDKは一度も
+初期化されず、これらは一切発生しません。</strong>
+<a href="https://policies.google.com/privacy">Googleのプライバシーポリシー</a>および
+<a href="https://support.google.com/admob/answer/6128543">GoogleによるApp・Playデータの利用</a>を
+ご覧ください。</p>
+
+<p><strong>Google Play ビリング</strong> &mdash; 買い切りの販売と復元に使用します。本アプリは
+「このGoogleアカウントがこの商品を所有しているか」をGoogle Playに問い合わせ、Google Playは
+購入記録を返します。これはアプリの起動時、アプリに戻ったとき、購入したとき、復元を押したときに
+行われます。お客様の氏名やメールアドレスは含まれません。
+<a href="https://policies.google.com/privacy">Googleのプライバシーポリシー</a>をご覧ください。</p>
+
+<h2>3. 当方が取得しない情報</h2>
+
+<ul>
+  <li>氏名、メールアドレス、電話番号その他の識別子</li>
+  <li>位置情報</li>
+  <li>連絡先、通話履歴、SMS</li>
+  <li>会話の本文、およびその一部</li>
+  <li>写真、動画、およびそれらから作られたもの</li>
+</ul>
+
+<p>これらを受け取れるサーバーを当方は持っていません。本アプリは当方へ何も送信しません。</p>
+
+<h2>4. 端末内に保存されるもの</h2>
+
+<p>本アプリは以下を<strong>この端末の、本アプリ専用の保存領域にのみ</strong>保存します。
+アンインストールするとすべて消えます。</p>
+
+<ul>
+  <li>選択したトーク履歴のテキストファイルと、そこから組み立てた時系列</li>
+  <li>古い端末から取り込んだ写真・動画のファイルと、その目録</li>
+  <li>それらのファイルから計算した小さな指紋（知覚ハッシュ）。動画を会話の位置へ
+  戻すために使います</li>
+  <li>広告を見て解放した、どの会話のどの週か</li>
+  <li>有料の解放を所有しているとGoogle Playが答えたかどうかと、最後に確認した時刻</li>
+  <li>選んだ配色と、会話のどちら側が自分かの設定</li>
+  <li>不具合の調査に使う動作ログ</li>
+</ul>
+
+<p>広告による解放はこの端末内にのみ保存されるため、アンインストールすると失われます。
+購入はGoogle Playがお客様のGoogleアカウントに紐づけて保持するため、再インストール後も
+復元できます。</p>
+
+<h2>5. USBで古い端末を読み取ること</h2>
+
+<p>USBケーブルで古いAndroid端末をつなぎ、その端末側で接続を許可すると、本アプリは写真・動画の
+ファイルをそこから複製します。これは本アプリの中心となる機能なので、その範囲を正確に
+記します。</p>
+
+<ul>
+  <li><strong>読み取りのみ。</strong>本アプリは古い端末に対して、書き込み・変更・名前の変更・
+  削除を一切行いません。</li>
+  <li><strong>プログラムに固定された5つのフォルダだけ。</strong>この一覧は、お客様にも、
+  当方にも、どのサーバーにも変更できません。内容は次のとおりです。
+    <ul>
+      <li><code>/sdcard/Android/data/jp.naver.line.android/files/chats</code></li>
+      <li><code>/sdcard/Android/data/jp.naver.line.android/storage/toyboximg</code></li>
+      <li><code>/sdcard/Pictures/LINE</code></li>
+      <li><code>/sdcard/Pictures/LINE_MOVIE</code></li>
+      <li><code>/sdcard/Movies/LINE</code></li>
+    </ul>
+  </li>
+  <li><strong>同梱物なし、ダウンロードなし。</strong>本アプリはコマンドライン実行ファイルを
+  含まず、実行可能なコードをダウンロードしません。Androidのデバッグ用プロトコルを自ら話し、
+  USBケーブル上でのみ通信します。</li>
+  <li><strong>通信はお客様の2台の端末の間だけ。</strong>その一部もインターネットを経由せず、
+  当方に届くこともありません。</li>
+</ul>
+
+<h2>6. この端末で選んだフォルダ</h2>
+
+<p>本アプリは、お客様自身が選んだバックアップのフォルダを探すこともできます。端末のフォルダ
+選択画面を通じて許可されたフォルダだけを読み、該当するファイルを本アプリの保存領域へ複製します。
+「すべてのファイルへのアクセス」権限は要求せず、選ばれていないフォルダを見ることはできません。</p>
+
+<h2>7. この端末へファイルを書き出すこと</h2>
+
+<p>復元された写真で保存または移動を押すと、本アプリは端末の選択画面でお客様が指定した場所へ
+複製を書き出します。これはお客様が求めたときにのみ行われます。</p>
+
+<h2>8. ネットワーク通信</h2>
+
+<table>
+  <thead>
+    <tr><th>通信先</th><th>いつ</th><th>送られるもの</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Google Play ビリング</td>
+      <td>起動時、アプリに戻ったとき、購入時、復元時</td>
+      <td>商品ID、購入トークン</td>
+    </tr>
+    <tr>
+      <td>Google AdMob</td>
+      <td>広告を表示するときのみ。購入済みの場合は発生しない</td>
+      <td>広告識別子、広告リクエストのデータ</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>会話・写真・動画がどちらの通信に含まれることもありません。3つ目の通信はありません。</p>
+
+<h2>9. 購入について</h2>
+
+<p>有料の解放は<strong>買い切り</strong>であり、定期購入ではありません。
+<strong>Google Playの課金システム</strong>を通じて販売されます。支払いはGoogleが処理し、
+当方がカード番号その他の支払い情報を受け取ったり見たりすることはありません。</p>
+
+<p>Google Playは開発者である当方に取引の記録（商品・価格・日付・購入された国または地域）を
+提供します。これに氏名やメールアドレスは含まれません。当方はこれを会計と、返金や購入に関する
+問い合わせへの対応にのみ使用します。</p>
+
+<p>購入はお客様のGoogleアカウントに紐づけて保持されるため、新しい端末や再インストール後でも
+追加の料金なしに復元できます。本アプリは定期的にGoogle Playへ確認し直すため、返金された購入は
+アクセスを与えなくなります。</p>
+
+<h2>10. 広告の設定</h2>
+
+<p>広告はGoogle AdMobにより配信され、お客様が見ることを選んだときにのみ表示されます。
+広告識別子の確認やリセット、パーソナライズ広告の制御は、端末の 設定 &rarr; プライバシー
+&rarr; 広告、または<a href="https://adssettings.google.com/">Googleの広告設定</a>で行えます。</p>
+
+<p>欧州経済領域または英国にお住まいの場合、本アプリは広告を要求する前にGoogleの
+User Messaging Platformを用いて同意を確認します。その選択は、本アプリの「このアプリについて」
+画面の<strong>広告のプライバシー設定</strong>からいつでも変更できます。同意が得られない場合、
+広告は一切要求されません。</p>
+
+<h2>11. 権限</h2>
+
+<p>本アプリは以下の権限を宣言しています。3つは当方が宣言したもので、残りはGoogle Play
+ビリングとGoogle Mobile Adsのライブラリが追加するものです。</p>
+
+<table>
+  <thead>
+    <tr><th>権限</th><th>用途</th></tr>
+  </thead>
+  <tbody>
+    <tr><td><code>FOREGROUND_SERVICE</code>, <code>FOREGROUND_SERVICE_DATA_SYNC</code></td>
+        <td>画面が消えている間も突き合わせを続けるため</td></tr>
+    <tr><td><code>POST_NOTIFICATIONS</code></td>
+        <td>そのサービスの進み具合の通知を出すため。拒否しても突き合わせは動きます</td></tr>
+    <tr><td><code>INTERNET</code>, <code>ACCESS_NETWORK_STATE</code>, <code>WAKE_LOCK</code></td>
+        <td>課金と広告のライブラリが必要とするもの</td></tr>
+    <tr><td><code>com.android.vending.BILLING</code></td>
+        <td>Google Playの課金システムを使うために必要</td></tr>
+    <tr><td><code>com.google.android.gms.permission.AD_ID</code>,
+        <code>ACCESS_ADSERVICES_AD_ID</code>, <code>ACCESS_ADSERVICES_ATTRIBUTION</code>,
+        <code>ACCESS_ADSERVICES_TOPICS</code></td>
+        <td>広告のライブラリが宣言するもの</td></tr>
+  </tbody>
+</table>
+
+<p>本アプリはカメラの権限も、位置情報の権限も、広いストレージの権限も要求しません。とくに
+「すべてのファイルへのアクセス」（<code>MANAGE_EXTERNAL_STORAGE</code>）は要求しません。
+トーク履歴のファイル、バックアップのフォルダ、写真の保存先の指定は、すべて端末自身の選択画面を
+通じて行われます。</p>
+
+<h2>12. クラッシュの報告</h2>
+
+<p>当方は、第2節のサービスに元から含まれるもの以外に、第三者のクラッシュ報告ツールを
+組み込んでいません。Google Play ストアで配布されるアプリについては、<strong>Googleが
+クラッシュ情報を自動的に収集</strong>し、集計した形で開発者に提供することがあります
+（Android vitals）。この収集はGoogleが行うもので、当方はその内容や範囲を制御できません。</p>
+
+<h2>13. お子様のプライバシー</h2>
+
+<p>本アプリは、書き出したトーク履歴へメディアを復元するための一般向けの道具であり、13歳未満の
+お子様を対象としていません。当方はお子様から意図的に情報を取得することはありません。</p>
+
+<h2>14. 本ポリシーの変更</h2>
+
+<p>本ポリシーを変更した場合は、このページを更新し発効日を改めます。重要な変更はアプリの
+リリースノートにも記載します。</p>
+
+<h2>15. お問い合わせ</h2>
+
+<p>連絡先メール: <a href="mailto:geekonissupport@gmail.com">geekonissupport@gmail.com</a></p>
+
+<hr>
+<p class="foot"><a href="index.html">Geekonis</a></p>
+
+</main>
+</body>
+</html>
